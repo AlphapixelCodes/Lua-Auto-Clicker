@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="NLUA_Test.Lua_Editor.PixelXYColor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NLUA_Test.Lua_Editor"
+             mc:Ignorable="d" d:DesignWidth="150" Height="287">
+    <ScrollViewer VerticalScrollBarVisibility="Hidden">
+        <StackPanel Margin="1,0,1,0">
+            <TextBlock TextAlignment="Center" Foreground="{DynamicResource Text}">Hit Space To Get Data</TextBlock>
+            <TextBlock TextAlignment="Center" Foreground="{DynamicResource Text}">(While Focused)</TextBlock>
+            <Button Background="{DynamicResource Background}" BorderBrush="{DynamicResource Border}" Foreground="{DynamicResource Text}" Margin="0,5,0,0" Click="Button_Click">Click Me To Focus</Button>
+            <TextBlock  Margin="0,5,0,0" Foreground="{DynamicResource Text}">Pixel Color (RGB):</TextBlock>
+            <TextBox x:Name="ColorBlock" IsReadOnly="True" Focusable="False" MouseDown="ColorBlock_MouseDown" BorderBrush="{DynamicResource Border}" Foreground="{DynamicResource Text}" Background="{DynamicResource Background}"/>
+            <TextBlock  Margin="0,5,0,0" Foreground="{DynamicResource Text}">Pixel Coords (XY):</TextBlock>
+            <TextBox x:Name="XyBlock" IsReadOnly="True" Focusable="False" MouseDown="XyBlock_MouseDown" Margin="0,0,0,5" Background="{DynamicResource Background}" BorderBrush="{DynamicResource Border}" Foreground="{DynamicResource Text}"/>
+            <TextBlock  Margin="0,0,0,5" Style="{DynamicResource TextCenter}">Functions</TextBlock>
+
+            <TextBlock Foreground="{DynamicResource Text}">Mouse.MoveTo( x, y )</TextBlock>
+            <TextBox Margin="0,5,0,5" x:Name="MouseMoveToBox" Focusable="False" MouseDown="MouseMoveTo_MouseDown" BorderBrush="{DynamicResource Border}" Foreground="{DynamicResource Text}" Background="{DynamicResource Background}"/>
+
+            <TextBlock Foreground="{DynamicResource Text}">ColorAtXYEquals(x,y,r,g,b)</TextBlock>
+            <TextBox Margin="0,5,0,5" x:Name="ColorAtXYEqualsBox" Focusable="False" MouseDown="ColorAtXYEquals_MouseDown" BorderBrush="{DynamicResource Border}" Foreground="{DynamicResource Text}" Background="{DynamicResource Background}"/>
+
+            <TextBlock Foreground="{DynamicResource Text}">getPixelColor( x, y )</TextBlock>
+            <TextBox Margin="0,5,0,5" x:Name="getPixelColorBox" Focusable="False" MouseDown="getPixelColor_MouseDown" BorderBrush="{DynamicResource Border}" Foreground="{DynamicResource Text}" Background="{DynamicResource Background}"/>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

@@ -1,0 +1,19 @@
+﻿<Window x:Class="NLUA_Test.BindOverlay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NLUA_Test"
+        mc:Ignorable="d"
+        Title="BindOverlay" Height="400" Width="400" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True">
+    <Grid Width="400">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Style="{StaticResource TextCenter}">Key Binds</TextBlock>
+        <StackPanel Grid.Row="1">
+            <local:KeybindClassViewer />
+        </StackPanel>
+    </Grid>
+</Window>

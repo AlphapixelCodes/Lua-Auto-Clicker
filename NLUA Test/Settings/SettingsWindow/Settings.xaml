@@ -1,0 +1,20 @@
+﻿<Window x:Class="NLUA_Test.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NLUA_Test"
+        mc:Ignorable="d"
+        Title="Settings" Height="450" Width="800">
+    <Grid Background="{StaticResource Background}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Button>Idk</Button>
+            <Button>Local Files</Button>
+            <Button>Overlay</Button>
+        </StackPanel>
+    </Grid>
+</Window>

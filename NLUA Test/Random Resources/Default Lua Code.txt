@@ -1,0 +1,5 @@
+﻿--called every tick
+--tickType tells you whether it is a TickType.Press or TickType.Toggle
+function onTick(tickType,name)
+    Mouse.Click(MouseButton.Left)
+end

@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="NLUA_Test.KeyBindingUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NLUA_Test"
+             mc:Ignorable="d" d:DesignWidth="210" VerticalAlignment="Stretch" Height="Auto" Loaded="UserControl_Loaded">
+    <Border Margin="2.5,5,2.5,5" Background="{DynamicResource Background}" BorderBrush="{DynamicResource Border}" BorderThickness="1" Height="Auto" CornerRadius="5">
+        <Grid Width="205" Height="Auto" Margin="0,5,0,5" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="21"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.ColumnSpan="2" Style="{DynamicResource TextCenter}" FontSize="15" Margin="0,0,0,3" >Keybind</TextBlock>
+            <TextBlock Grid.Row="1" Style="{DynamicResource TextCenter}">Name</TextBlock>
+            <TextBox Grid.Row="1" x:Name="NameTextBox" Grid.Column="1" Margin="0,0,0,5" Style="{StaticResource TextBoxDark}"/>
+
+            <TextBlock Grid.Row="2" Style="{DynamicResource TextCenter}" Margin="0,0,0,5" VerticalAlignment="Center">Type</TextBlock>
+            <ComboBox x:Name="TypeCombo" Grid.Row="2" Grid.Column="1" Margin="0,0,0,5"/>
+
+            <TextBlock Grid.Row="3" Style="{DynamicResource TextCenter}">Function Name</TextBlock>
+            <TextBox Grid.Row="3" x:Name="FunctionBox" Grid.Column="1" Margin="0,0,0,5" Text="onTick" Style="{StaticResource TextBoxDark}"/>
+
+            <TextBlock Grid.Row="4" x:Name="TickSpeedBlock" Style="{DynamicResource TextCenter}">Tick Speed (MS)</TextBlock>
+            <TextBox   Grid.Row="4" x:Name="TickSpeedBox" Grid.Column="1" Margin="0,0,0,5" Style="{StaticResource TextBoxDark}">500</TextBox>
+
+            <TextBlock Grid.Row="5" Style="{DynamicResource TextCenter}">Key Bind</TextBlock>
+            <TextBlock Grid.Row="5" x:Name="KeyBindBlock" TextWrapping="Wrap" Grid.Column="1" Style="{DynamicResource TextCenter}">Not Set</TextBlock>
+
+            <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Margin="3" Click="Delete_Click" Background="{StaticResource Border}" Foreground="{StaticResource Text}" BorderBrush="{x:Null}" >Delete</Button>
+                <Button Grid.Column="1" Margin="3" Click="Validate_Click" FontSize="11" Background="{StaticResource Border}" Foreground="{StaticResource Text}" BorderBrush="{x:Null}">Valdiate</Button>
+                <Button Grid.Column="2" Margin="3" Click="ChangeBinding_Click" Background="{StaticResource Border}" Foreground="{StaticResource Text}" BorderBrush="{x:Null}">Change</Button>
+                <Button Grid.Column="3" Margin="3" Click="Clearbinding_Click" Background="{StaticResource Border}" Foreground="{StaticResource Text}" BorderBrush="{x:Null}">Clear</Button>
+            </Grid>
+        </Grid>
+        
+    </Border>
+</UserControl>

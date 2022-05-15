@@ -1,0 +1,38 @@
+﻿<Page xmlns:NLUA_Test="clr-namespace:NLUA_Test"  x:Class="NLUA_Test.Lua_Editor.Pages.PropertyPageV2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NLUA_Test.Lua_Editor.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PropertyPageV2" Loaded="Page_Loaded">
+
+    <ScrollViewer VerticalScrollBarVisibility="Hidden">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock  Grid.Row="0" Style="{StaticResource TextCenter}" FontSize="17">Properties</TextBlock>
+            <StackPanel Width="300" Grid.Row="1">
+                <TextBlock  Foreground="{StaticResource Text}" VerticalAlignment="Center">Name</TextBlock>
+                <TextBox  HorizontalAlignment="Left" x:Name="NameBox" Width="150" Grid.Column="1" Style="{StaticResource TextBoxDark}"/>
+                <TextBlock  Foreground="{StaticResource Text}" VerticalAlignment="Center">Description</TextBlock>
+                <TextBox Height="26" x:Name="DescriptionBox" Style="{StaticResource TextBoxDark}"/>
+            </StackPanel>
+            <Border Grid.Row="2" BorderThickness="0,0,0,1" BorderBrush="{StaticResource Border}">
+                <Grid  Height="Auto">
+                    <TextBlock Grid.Row="2" Style="{StaticResource TextCenter}" FontSize="15">Key Binds</TextBlock>
+                    <Button Width="20" HorizontalAlignment="Left" Margin="2,0,0,0" Click="AddKeyBind_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                        <Image Source="\Images\Plus.png"/>
+                    </Button>
+                </Grid>
+            </Border>
+
+            <WrapPanel Grid.Row="3" Orientation="Horizontal" x:Name="BindWrapPanel"/>
+        </Grid>
+    </ScrollViewer>
+</Page>

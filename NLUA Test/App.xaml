@@ -1,0 +1,25 @@
+﻿<Application x:Class="NLUA_Test.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NLUA_Test"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="Background" Color="#FF111111" />
+        <SolidColorBrush x:Key="Border" Color="#FF282828" />
+        <SolidColorBrush x:Key="Text" Color="White" />
+        <SolidColorBrush x:Key="EnabledText" Color="Lime" />
+        <SolidColorBrush x:Key="DisabledText" Color="Red" />
+        <Style x:Key="TextCenter" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource Text}" />
+            <Setter Property="TextAlignment" Value="Center" />
+        </Style>
+        <Style x:Key="TextBoxDark" TargetType="TextBox">
+            <Setter Property="Background" Value="{StaticResource Background}"/>
+            <Setter Property="Foreground" Value="{StaticResource Text}"/>
+        </Style>
+        <Image x:Key="CheckMark" Source="\Images\CheckMark3.png" />
+        <Image x:Key="CancelMark" Source="\Images\CancelMark3.png" />
+    </Application.Resources>
+</Application>
+
+    

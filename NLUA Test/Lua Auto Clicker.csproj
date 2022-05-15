@@ -1,0 +1,72 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>NLUA_Test</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\api2.png" />
+    <None Remove="Images\CancelMark.png" />
+    <None Remove="Images\CancelMark2.png" />
+    <None Remove="Images\CancelMark3.png" />
+    <None Remove="Images\CheckMark.png" />
+    <None Remove="Images\CheckMark2.png" />
+    <None Remove="Images\CheckMark3.png" />
+    <None Remove="Images\Close.png" />
+    <None Remove="Images\EditorIcon.png" />
+    <None Remove="Images\Plus.png" />
+    <None Remove="Images\Properties.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AvalonEdit" Version="6.1.3.50" />
+    <PackageReference Include="InputSimulator" Version="1.0.4" />
+    <PackageReference Include="NLua" Version="1.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\api2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\CancelMark.png" />
+    <Resource Include="Images\CancelMark2.png" />
+    <Resource Include="Images\CancelMark3.png" />
+    <Resource Include="Images\CheckMark.png" />
+    <Resource Include="Images\CheckMark2.png" />
+    <Resource Include="Images\CheckMark3.png" />
+    <Resource Include="Images\Close.png" />
+    <Resource Include="Images\EditorIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Plus.png" />
+    <Resource Include="Images\Properties.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Random Resources\Default Lua Code.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

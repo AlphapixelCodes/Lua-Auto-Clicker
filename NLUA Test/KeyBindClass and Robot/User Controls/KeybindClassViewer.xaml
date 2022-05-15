@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="NLUA_Test.KeybindClassViewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NLUA_Test"
+             mc:Ignorable="d" d:DesignWidth="420" Height="36">
+    <Border Margin="5" BorderBrush="{DynamicResource Border}" BorderThickness="1"  >
+        <Grid Loaded="Grid_Loaded" Height="auto">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".15*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width=".3*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="EnabledButton" Click="EnableButton_Click"  Height="18" Width="18" Background="{DynamicResource Background}" BorderBrush="{DynamicResource Border}" Foreground="{DynamicResource Text}" ToolTip="Disable">
+                <Image/>
+            </Button>
+            <Border Grid.Column="1" BorderBrush="{DynamicResource Border}" BorderThickness="0,0,1,0">
+                <TextBlock  x:Name="NameBlock" VerticalAlignment="Center" Style="{DynamicResource TextCenter}" TextWrapping="Wrap">Name</TextBlock>
+            </Border>
+            <Border Grid.Column="2" BorderBrush="{DynamicResource Border}" BorderThickness="1,0,1,0">
+                <TextBlock  x:Name="TypeBlock" VerticalAlignment="Center" Style="{DynamicResource TextCenter}">Release</TextBlock>
+            </Border>
+            <TextBlock Grid.Column="3" x:Name="BindingBlock" VerticalAlignment="Center" Style="{DynamicResource TextCenter}" TextWrapping="Wrap">Ctrl + A</TextBlock>
+
+        </Grid>
+    </Border>
+</UserControl>
